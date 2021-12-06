@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*, ::before, ::after { 
+    box-sizing: border-box; 
+    padding: 0; 
+    margin: 0; 
+}
+/* police */
+body{
+    font-family: 'oswald';
+}
+/* img de fond  */
+header{
+    background: url(./img/james-harrison-vpOeXr5wmR4-unsplash.jpg)no-repeat;
+    background-size :cover;
+    height: 65vh;
+}
+/* nav bar  */
+nav{
+     display: flex;
+     justify-content: space-evenly;
+
+    }
+    
+#bloc{
+    height: 200px;
+}
+/* h1 */
+h1{
+    font-size: 50px;
+    letter-spacing: 15px;
+    position: absolute;
+    margin-top: 75px;
+	left: 0;
+	transition: left 1s, transform 1s;
+	white-space: nowrap;
+    font-family: 'oswald';
+    
+}
+/* h1 hover pour l'animation */
+#bloc:hover h1{
+	left: 100%;
+	transform: translateX(-100%);
+}
+/* style de ma bar nav  */
+.menu nav{
+    background-color: #000;
+    width: 100%;
+    height: 75px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family:'oswald';
+    position: fixed;
+}
+nav li a{
+    text-decoration: none;
+    display:block;
+    justify-content: space-around;               
+    min-width: 120px;              
+    margin: 0.5rem;               
+    padding: 0.4rem 0;            
+    text-align: center;             
+    color:#FE8102;                  
+    text-decoration: none;        
+    transition: all 1s ;         
+    
+}
+/* pour changer la couleur quand le curseur passe au dessus */
+nav li a:hover{
+    text-decoration: none;
+    display:block;
+    justify-content: space-around;               
+    min-width: 120px;              
+    margin: 0.5rem;               
+    padding: 0.4rem 0;            
+    text-align: center;             
+    background-color: #408FA7;
+    color: #fff;       
+    text-decoration: none;                   
+    transition: all 1s ;         
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    width: 150px;
+    padding:0;                  
+}            
+/* je defini une img en background */
+body{
+    background: url(./img/Sans\ titre.png)no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    color: #fff;
+}
+/* le style du text et img d l'accueil */
+#accueil, #accueil-3{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+#accueil-2 {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+#accueil img{
+    width: 415px;
+    height: 415px;
+    max-width: 100%;
+    
+}
+
+.text-img{
+    text-align:left;
+    background-color:rgba(0,0,0,0.5);
+    background-size: 150px;
+    width: 415px;
+    height: 415px;
+    font-family: 'Oswald';
+    color:#408FA7;
+    padding: 1rem; 
+    margin: 0;
+    letter-spacing: 3px; 
+}
+
+#accueil-2 img{
+    width: 415px;
+    height: 415px;
+    max-width: 100%;
+}
+
+#accueil-3 img{
+    width: 415px;
+    height: 415px;
+    max-width: 100%;
+}
+/* style de tout les h2 avec l'img background */
+.projets-h2 h2{
+    height:30vh ;
+    text-align: center;
+    color:#000;
+    font-family: 'oswald';
+    font-size:80px;
+    letter-spacing: 25px;
+    width: 300px;
+    height: auto;
+}
+.projets-h2{
+    background-image: url(./img/tyler.3.jpg);
+    background-position: center;
+    background-size: cover;
+    height:30vh ;
+    margin-top: 70px;
+}
+
+
+#projets img{
+    max-height:100%;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    background-color:#000;
+}
+/* je placer mes element pour les projets */
+.galerie-projet{
+    max-width: 1300px;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    gap: 10px;
+
+}  
+
+.grid-item{
+    width: 300px;
+    height: 200px;
+    background-color: #222;
+    position: relative;
+}
+/* pour affiche le texte une fois que le curseur passe haut dessus */
+.grid-item:hover img{
+    opacity: 0.5;
+}
+.grid-item p{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    left: 50%;
+    opacity:0;
+    text-align: center;
+    font-family: 'Oswald';
+    font-size: 20px;
+    color:#fff;
+    transition: all 0.4s ease;  
+}
+
+.grid-item:hover p{
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.grid-comp{
+    max-width: 1300px;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    justify-content: center;
+    gap: 20px;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.item-grid{
+    font-family:'oswald';
+    font-size: 50px;
+    color: #408FA7;
+}
+/* style pour les mes progress bar */
+@keyframes growProgressBar {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+}
+  
+  div[role="progressbar"] {
+    --size: 12rem;
+    --fg:#408FA7;
+    --bg:#000;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;  
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    gap: 10px;
+    max-width: 1300px;
+    background: 
+    radial-gradient(closest-side,#000 80%, transparent 0 99.9%,#000 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: 'oswald', Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  
+  div[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+}
+/* cv */
+.cv img{
+      width: 250px;
+      height: auto;
+      transition: all 1s ease;
+      background-color: #000;
+
+  }
+  /* amination du cv */
+.cv img:hover{
+    transform:scale(1.25);
+}
+
+.cv-text{
+      text-align: center;
+      font-family: 'oswald';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #408FA7;
+}
+/* formulaire de contact */
+input[type=text], textarea, input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+  }
+  label{margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;}
+  
+  input[type=submit] {
+    background-color: #408FA7;
+    color:#fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #000;
+  }
+  /* pour center le formulaire */
+  .container {
+    box-sizing : border-box;
+    border-radius:5px;
+    background-color:#000;
+    padding:20px;
+    width: 100%;
+    max-width: 440px;
+    margin:0 auto;
+  }
+/* responsive */
+@media screen  and (max-width:590px){
+    #accueil, #accueil-3{
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: center;
+    }
+    .grid-comp{
+        max-width: 1300px;
+        width: 80%;
+        height: auto;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 300px);
+        justify-content: center;
+        gap: 20px;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #accueil-2 {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h1{
+        font-size:40px;
+        letter-spacing: 5px;
+
+    }
+    .projets-h2{
+        background-image: url(./img/tyler.3.jpg);
+        background-position: center;
+        background-size: cover;
+        height:10vh ;
+        margin-top: 50px;
+    }
+    .projets-h2 h2{
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+    
+     
+}
+
+
+
+
